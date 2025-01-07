@@ -1,0 +1,12 @@
+{
+    "maps": [
+        {
+        "name": "Nordic Countries",
+        "description": "This is the Nordic Countries map for 2-3 players"
+        },
+        {
+        "name": "Original USA",
+        "description": "This is the Original USA map for 2-5 players"
+        }
+    ]
+}
