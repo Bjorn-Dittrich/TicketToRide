@@ -1,3 +1,6 @@
+import json
+from route import Route
+
 class GameBoard:
     def __init__(self, json_file: str):
         """
