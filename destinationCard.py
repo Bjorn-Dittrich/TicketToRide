@@ -14,6 +14,11 @@ class DestinationDeck:
             self.cards.append(DestinationCard('Locomotive'))
         random.shuffle(self.cards)
 
+    def shuffleDeck(self, discardPile):
+        self.cards.extend(discardPile)
+        random.shuffle(self.cards)
+
+
 class DestinationCard:
     COLORS = ['Red', 'Blue', 'Green', 'Yellow', 'White', 'Black', 'Purple', 'Orange', 'Locomotive']
 
