@@ -1,10 +1,17 @@
-from utils import getGameMode, getGameMap
+from utils import getGameMode, getGameMap, getTotalPlayers, getAIPlayers
 from destinationCard import DestinationDeck
 
 def startGame():
     print("Welcome to Ticket to Ride")
-    gameMode = getGameMode()
     gameMap = getGameMap()
-    print(gameMode)
-    destinationDeck = DestinationDeck()
-    print(destinationDeck)
+    gameMode = getGameMode()
+    if(gameMode == "AI"):
+        print("AI mode selected")
+        loadAIGame(gameMap)
+
+def loadPlayerAIGame(gameMap):
+    print("Loading AI game")
+    print(gameMap)
+    numPlayers = getTotalPlayers('2-3')
+    numAIP = getAIPlayers(numPlayers)
+    

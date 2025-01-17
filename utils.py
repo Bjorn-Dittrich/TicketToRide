@@ -29,3 +29,17 @@ def getGameMode():
         choice = input("Game map number: ")
     if choice == "1":
         return "AI"
+    
+def getTotalPlayers(playerRange):
+    print("Select the number of players ("+playerRange+"):")
+    while(not choice.isdigit() or not (playerRange.split("-")[0] <= int(choice) <= playerRange.split("-")[1])):
+        print("Invalid number of players. Please try again.")
+        choice = input("Number of players: ")
+    return int(choice)
+
+def getAIPlayers(numPlayers):
+    print("Select the number of AI players:")
+    while(not choice.isdigit() or not (0 <= int(choice) <= numPlayers)):
+        print("Invalid number of AI players. Please try again.")
+        choice = input("Number of AI players: ")
+    return int(choice)
