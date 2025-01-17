@@ -7,7 +7,7 @@ class DestinationDeck:
         self.createShuffledDeck()
 
     def createShuffledDeck(self):
-        for color in self.COLORS[:-1]:  # Exclude 'Locomotive'
+        for color in self.colors[:-1]:  # Exclude 'Locomotive'
             for _ in range(12):
                 self.cards.append(DestinationCard(color))
         for _ in range(14):
@@ -17,6 +17,9 @@ class DestinationDeck:
     def shuffleDeck(self, discardPile):
         self.cards.extend(discardPile)
         random.shuffle(self.cards)
+
+    def __repr__(self):
+        return f"DestinationDeck(deck={self.cards})"
 
 
 class DestinationCard:
