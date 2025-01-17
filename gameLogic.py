@@ -7,7 +7,7 @@ def startGame():
     gameMode = getGameMode()
     if(gameMode == "AI"):
         print("AI mode selected")
-        loadAIGame(gameMap)
+        loadPlayerAIGame(gameMap)
 
 def loadPlayerAIGame(gameMap):
     print("Loading AI game")
