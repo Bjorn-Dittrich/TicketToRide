@@ -31,14 +31,14 @@ def getGameMode():
         return "AI"
     
 def getTotalPlayers(playerRange):
-    print("Select the number of players ("+playerRange+"):")
-    while(not choice.isdigit() or not (playerRange.split("-")[0] <= int(choice) <= playerRange.split("-")[1])):
+    choice = input("Select the number of players ("+playerRange+"):")
+    while(not choice.isdigit() or not (int(playerRange.split("-")[0]) <= int(choice) <= int(playerRange.split("-")[1]))):
         print("Invalid number of players. Please try again.")
         choice = input("Number of players: ")
     return int(choice)
 
 def getAIPlayers(numPlayers):
-    print("Select the number of AI players:")
+    choice = input("Select the number of AI players (0-"+str(numPlayers)+"):")
     while(not choice.isdigit() or not (0 <= int(choice) <= numPlayers)):
         print("Invalid number of AI players. Please try again.")
         choice = input("Number of AI players: ")
