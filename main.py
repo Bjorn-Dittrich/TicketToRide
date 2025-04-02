@@ -1,6 +1,6 @@
-from gameLogic import startGame
+from gameLogic import startMenu
 
 def main():
-    startGame()
+    startMenu()
 
 main()
